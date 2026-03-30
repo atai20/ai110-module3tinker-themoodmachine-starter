@@ -6,6 +6,16 @@ This file defines:
   - NEGATIVE_WORDS: starter list of negative words
   - SAMPLE_POSTS: short example posts for evaluation and training
   - TRUE_LABELS: human labels for each post in SAMPLE_POSTS
+
+
+
+Use Copilot to help you inspect the dataset.
+Reference the file or a selection when asking questions.
+Focus on understanding relationships between SAMPLE_POSTS and TRUE_LABELS.
+If Copilot's explanation feels generic, add more context or reason through it yourself.
+
+
+
 """
 
 # ---------------------------------------------------------------------
@@ -50,6 +60,21 @@ SAMPLE_POSTS = [
     "This is fine",
     "So excited for the weekend",
     "I am not happy about this",
+
+    "Yo wassup my bro",
+    "Ure feeling me?",
+    "Where are you?🫃",
+    "Where are we going?😏",
+    "Amazing!!!🤩",
+    "No aliens here👽",
+
+    # Additional examples
+    "Lowkey I am sad but also excited for tomorrow 😂",
+    "No cap, this is the best day ever 🥳",
+    "I absolutely hate getting stuck in traffic 😡",
+    "Highkey stressed but still okay",
+    "I love it, no complaints at all!",
+    "I'm tired, but no big deal."
 ]
 
 # Human labels for each post above.
@@ -59,12 +84,27 @@ SAMPLE_POSTS = [
 #   - "neutral"
 #   - "mixed"
 TRUE_LABELS = [
+
     "positive",  # "I love this class so much"
     "negative",  # "Today was a terrible day"
     "mixed",     # "Feeling tired but kind of hopeful"
     "neutral",   # "This is fine"
     "positive",  # "So excited for the weekend"
     "negative",  # "I am not happy about this"
+
+    "positive", # "Yo wassup my bro",
+    "neutral", # "Ure feeling me?",
+    "neutral", # "Where are you?🫃",
+    "positive", # "Where are we going?😏",
+    "positive", # "Amazing!!!🤩",
+    "negative", # "No aliens here👽"
+
+    "mixed",    # "Lowkey I am sad but also excited for tomorrow 😂"
+    "positive", # "No cap, this is the best day ever 🥳"
+    "negative", # "I absolutely hate getting stuck in traffic 😡"
+    "mixed",    # "Highkey stressed but still okay"
+    "positive", # "I love it, no complaints at all!"
+    "mixed"     # "I'm tired, but no big deal."
 ]
 
 # TODO: Add 5-10 more posts and labels.
