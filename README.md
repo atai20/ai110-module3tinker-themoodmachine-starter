@@ -65,3 +65,29 @@ During this lab you will:
 - When debugging, print tokens, scores, or intermediate choices.
 - Ask an AI assistant to help create edge case posts or unusual wording.
 - Try examples that mislead or confuse your model. Failure cases teach you the most.
+
+## Running the Mood Machine
+
+1. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+2. Run the rules engine:
+
+```bash
+python main.py
+```
+
+3. Run tests:
+
+```bash
+python -m pytest -q
+```
+
+## Recent improvements implemented
+
+- `mood_analyzer.py`: advanced preprocessing, strong sentiment weights, negation handling, and explainability.
+- `dataset.py`: added 6 new posts + corrected label typo (`netrual` -> `neutral`).
+- `tests/test_mood_analyzer.py`: 5 behavioral tests for positive/negative/mixed/negation/explain.
